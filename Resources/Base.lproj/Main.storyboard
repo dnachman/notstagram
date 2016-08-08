@@ -121,11 +121,58 @@
                         <outlet property="switchButton" destination="Hbd-0K-eAA" id="LfY-0M-9Ja"/>
                         <outlet property="switchText" destination="EEb-O9-Yzj" id="v14-zN-6Ih"/>
                         <outlet property="username" destination="QUu-02-a01" id="haA-3h-ca5"/>
+                        <segue destination="aAZ-CU-NOY" kind="show" identifier="login" id="hbZ-5K-RVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="314.5"/>
+            <point key="canvasLocation" x="-260.5" y="476.5"/>
+        </scene>
+        <!--User List-->
+        <scene sceneID="FxZ-24-UcX">
+            <objects>
+                <tableViewController id="vjs-Zg-adc" customClass="TableViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IQe-FP-h5A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="tp5-YI-n9d">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tp5-YI-n9d" id="KJA-5b-xjq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vjs-Zg-adc" id="QHy-MT-sSY"/>
+                            <outlet property="delegate" destination="vjs-Zg-adc" id="TBM-rx-lsY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="User List" id="4wp-Eb-sRN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7u-6r-89k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978.5" y="482.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7cz-eY-7ID">
+            <objects>
+                <navigationController id="aAZ-CU-NOY" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nuo-UE-xOC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vjs-Zg-adc" kind="relationship" relationship="rootViewController" id="jEV-c0-aJZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDi-2X-3p1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="477"/>
         </scene>
     </scenes>
 </document>
